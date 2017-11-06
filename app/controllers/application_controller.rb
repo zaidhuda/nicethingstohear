@@ -6,6 +6,15 @@ class ApplicationController < ActionController::Base
     set_meta_tags site: I18n.t('app.name'),
                   reverse: true,
                   separator: '-',
-                  description: I18n.t('app.description')
+                  description: I18n.t('app.description'),
+                  canonical: request.original_url,
+                  og: {
+                    url: :canonical,
+                    title: :title,
+                    description: :description
+                  },
+                  twitter: {
+                    card: 'summary'
+                  }
   end
 end
