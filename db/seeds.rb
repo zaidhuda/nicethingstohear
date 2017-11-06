@@ -1,0 +1,1 @@
+Admin.create! email: 'admin@zaidhuda.com', password: 'password'

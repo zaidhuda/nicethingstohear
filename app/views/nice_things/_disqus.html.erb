@@ -1,0 +1,20 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "<%= content_nice_thing_url nice_thing %>";
+    this.page.identifier = "<%= nice_thing.slug %>";
+  };
+  if(typeof DISQUS === "undefined"){
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://nicethingstohear.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    })();
+  } else {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    });
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

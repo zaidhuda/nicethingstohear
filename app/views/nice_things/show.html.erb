@@ -1,0 +1,9 @@
+<main class="py-3 text-center container large">
+  <div class="text-uppercase nice-thing" id="niceThing">
+    <span><%= @nice_thing.text %></span>
+  </div>
+  <div class="mt-5">
+    <%= link_to 'How', content_nice_thing_path, class: "btn #{theme[:btn]}" %>
+    <%= link_to 'Say something else', say_something_nice_path, class: "btn #{theme[:btn]}" %>
+  </div>
+</main>

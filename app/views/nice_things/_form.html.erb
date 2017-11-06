@@ -1,0 +1,29 @@
+<%= form_for(nice_thing) do |f| %>
+  <% if nice_thing.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <strong><%= pluralize(nice_thing.errors.count, "error") %> preventing this <%= NiceThing.model_name.human.downcase %> from being saved:</strong>
+
+      <ul>
+      <% nice_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :text, class: 'sr-only' %>
+    <%= f.text_field :text, placeholder: NiceThing.human_attribute_name(:text).humanize, class: 'form-control', autocomplete: :off, minlength: 7, maxlength: 100 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, class: 'sr-only' %>
+    <%= f.text_area :content, placeholder: NiceThing.human_attribute_name(:content).humanize, class: 'form-control', autocomplete: :off, rows: 5 %>
+  </div>
+
+  <p><small>Submission will be reviewed before being published.</small></p>
+
+  <div class="actions text-right">
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  </div>
+<% end %>

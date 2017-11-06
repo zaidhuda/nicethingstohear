@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg <%= theme[:navbar] %> justify-content-between">
+  <%= link_to t('app.title_short'), root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="nav navbar-nav ml-auto">
+      <%= active_link_to 'say something', new_nice_thing_path, class: 'nav-link', wrap_tag: :li, wrap_class: 'nav-item' %>
+      <%= active_link_to 'about', about_path, class: 'nav-link', wrap_tag: :li, wrap_class: 'nav-item' %>
+    </ul>
+  </div>
+</nav>

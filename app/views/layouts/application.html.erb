@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= display_meta_tags %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="<%= "#{theme[:bg]} #{theme[:text]}" %>">
+    <%= render 'layouts/partials/navbar' %>
+    <%= yield %>
+    <%= link_to 'inverse', inverse_path, method: :post, class: "btn #{theme[:btn]} inverse-btn" %>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<main class="py-3 container">
+  <div>
+    <%= link_to "##{@nice_thing.id}", url_for(@nice_thing), class: 'text-muted font-weight-light' %>
+  </div>
+  <h1 class="text-uppercase nice-thing text-left"><%= @nice_thing.text %></h1>
+  <p><%= parse_nice_thing_content %></p>
+  <div class="my-5">
+    <%= link_to 'Okay, say something else', say_something_nice_path, class: "btn #{theme[:btn]}" %>
+  </div>
+  <hr class="my-5 bg-light">
+  <div class="mt-5">
+    <%= render 'disqus', nice_thing: @nice_thing %>
+  </div>
+</main>

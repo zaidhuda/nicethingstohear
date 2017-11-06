@@ -1,0 +1,12 @@
+en:
+  app:
+    name: NiceThingstoHear
+    title: NiceThingstoHear
+    title_short: NiceThing
+    tagline: Everyone wants to hear something nice every once in a while.
+    description: We say nice things to you
+  activerecord:
+    attributes:
+      nice_thing:
+        text: the nice thing
+        content: what nice about it

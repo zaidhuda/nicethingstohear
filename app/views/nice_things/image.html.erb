@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" style="width: <%= params[:size] %>px; height: <%= params[:size] %>px;">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="text-uppercase nice-thing" id="niceThing">
+    <span><%= @nice_thing.text %></span>
+  </div>
+</body>
+</html>
