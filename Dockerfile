@@ -5,6 +5,5 @@ WORKDIR /app
 ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install
-RUN bundle exec rake RAILS_ENV=production assets:precompile
 ADD . /app
 EXPOSE 3030
