@@ -6,5 +6,4 @@ ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 ADD . /app
-RUN cp nicethingstohear.conf /etc/nginx/sites-available/
 EXPOSE 3030
