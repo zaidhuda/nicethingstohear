@@ -3,6 +3,7 @@ module ApplicationHelper
     case session[:theme]
     when 'dark'
       {
+        name: 'dark',
         bg: 'bg-dark',
         navbar: 'navbar-dark bg-dark',
         btn: 'btn-dark',
@@ -10,6 +11,7 @@ module ApplicationHelper
       }
     else
       {
+        name: 'light',
         bg: 'bg-white',
         navbar: 'navbar-light bg-light',
         btn: 'btn-light',

@@ -11,6 +11,5 @@
   <body class="<%= "#{theme[:bg]} #{theme[:text]}" %>">
     <%= render 'layouts/partials/navbar' %>
     <%= yield %>
-    <%= link_to 'inverse', inverse_path, method: :post, class: "btn #{theme[:btn]} inverse-btn" %>
   </body>
 </html>

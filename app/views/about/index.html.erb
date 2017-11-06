@@ -6,4 +6,10 @@
   <p>Surely, this website will never be able to reproduce the effect of hearing nice things from people. However, believe it or not, things we read and hear really affects us, even if it is from a computer. Let us <%= link_to 'say something nice', say_something_nice_path %> to you.</p>
 
   <p>If you're still reading, would you like to <%= link_to 'say something nice to others', new_nice_thing_path %>?</p>
+
+  <hr class="my-4 bg-light">
+
+  <p>
+    <%= link_to "#{theme[:name]} theme", inverse_path, method: :post, class: "btn #{theme[:btn]}" %>
+  </p>
 </main>
