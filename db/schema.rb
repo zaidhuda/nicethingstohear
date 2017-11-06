@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103171816) do
+ActiveRecord::Schema.define(version: 20171106110653) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 20171103171816) do
   create_table "nice_things", force: :cascade do |t|
     t.string   "text"
     t.text     "content"
-    t.boolean  "enabled"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "enabled",    default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "slug"
     t.index ["slug"], name: "index_nice_things_on_slug"
   end
