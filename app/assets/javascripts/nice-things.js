@@ -13,3 +13,8 @@ $(document).on('turbolinks:load', function() {
 
   resizeNiceThing();
 })
+
+$(document).on('turbolinks:load', function() {
+  if (!$('#nice_thing_content').length) return;
+  var simplemde = new SimpleMDE();
+})

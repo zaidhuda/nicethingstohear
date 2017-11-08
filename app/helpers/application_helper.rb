@@ -19,4 +19,8 @@ module ApplicationHelper
       }
     end
   end
+
+  def render_md text
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text).html_safe
+  end
 end

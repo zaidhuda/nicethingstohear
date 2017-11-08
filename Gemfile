@@ -25,6 +25,9 @@ gem 'devise'
 gem 'active_link_to'
 gem 'meta-tags'
 
+gem 'simplemde'
+gem 'redcarpet'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end

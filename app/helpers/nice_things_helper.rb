@@ -5,7 +5,7 @@ module NiceThingsHelper
     root_path
   end
 
-  def parse_nice_thing_content
+  def nice_thing_content
     if @nice_thing.content.present?
       @nice_thing.content
     else
