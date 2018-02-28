@@ -11,5 +11,7 @@ class NiceThing < ApplicationRecord
 
   def self.random
     self.find self.ids.sample
+  rescue RecordNotFound
+    nil
   end
 end
