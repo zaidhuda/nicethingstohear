@@ -10,6 +10,6 @@ class NiceThing < ApplicationRecord
   scope :disabled, -> { where(enabled: false) }
 
   def self.random
-    self.enabled.order("random()").first
+    self.find self.ids.sample
   end
 end
